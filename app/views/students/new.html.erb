@@ -1,0 +1,20 @@
+<h1>Create a new Student</h1>
+
+<%= form_for(@student) do |f| %>
+  <ul>
+  <% @student.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+  <p>
+    <%= f.label 'Student Name' %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label 'Graduation Year' %><br />
+    <%= f.text_area :graduationYear %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

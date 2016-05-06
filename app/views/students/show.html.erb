@@ -1,0 +1,4 @@
+<h1><%= @student.name %></h1>
+<p>Graduates in <%= @student.graduationYear %></p>
+<%= link_to "Delete This Student", student_path(@student), method: :delete %>
+<%= link_to "<< Back to Student List", students_path %>

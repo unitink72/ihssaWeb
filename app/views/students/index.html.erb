@@ -1,0 +1,11 @@
+<h1>All Students</h1>
+
+<ul>
+  <% @students.each do |stdt| %>
+    <li>
+      <%= stdt.name %>
+      <%= stdt.graduationYear %>
+    </li>
+  <% end %>
+</ul>
+
