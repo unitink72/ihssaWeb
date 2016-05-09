@@ -1,11 +1,13 @@
 <h1>All Students</h1>
 
-<ul>
+<table>
   <% @students.each do |stdt| %>
-    <li>
-      <%= stdt.name %>
-      <%= stdt.graduationYear %>
-    </li>
+    <tr>
+      <td><%= link_to stdt.name, student_path(stdt) %></td>
+      <td><%= stdt.graduationYear %></td>
+    </tr>
   <% end %>
-</ul>
+</table>
+<p>
+<%= link_to "New Student", new_student_path %>
 

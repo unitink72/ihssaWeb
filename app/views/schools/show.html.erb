@@ -1,0 +1,15 @@
+<h1><%= @school.name %></h1>
+
+<p>Purchase Order # <%= @school.poNumber %></p>
+
+<p><h3>Address</h3>
+<%= @school.addressStreet %><br />
+<%= @school.addressCity %><br/ >
+<%= @school.addressState %><br />
+<%= @school.addressZip %>
+</p>
+
+<%= link_to "Delete This School", school_path(@school), method: :delete %>
+<br />
+<br />
+<%= link_to "<< Back to School List", schools_path %>
